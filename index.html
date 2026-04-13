@@ -1,0 +1,1303 @@
+<html lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucrèce Borgia</title>
+<style>
+          html, body {
+            margin: 0;
+            padding: 0;
+          }
+
+          html {
+            scroll-behavior: smooth;
+          }
+
+          body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #efe8da;
+            color: #22201c;
+            line-height: 1.7;
+          }
+
+          .page-shell {
+            padding: 3rem 1.5rem 4rem 1.5rem;
+          }
+
+          .page-card {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fffdf8;
+            box-shadow: 0 12px 36px rgba(74, 58, 37, 0.10);
+            border: 1px solid #ddd2bd;
+          }
+
+          .with-sidebar {
+            display: grid;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 2.5rem;
+            padding: 2.5rem 3rem 4rem 3rem;
+          }
+
+          .toc {
+            position: sticky;
+            top: 1rem;
+            align-self: start;
+            max-height: calc(100vh - 2rem);
+            overflow: auto;
+            padding-right: 1rem;
+            border-right: 1px solid #d8cdb9;
+          }
+
+          .toc h2 {
+            margin: 0 0 1rem 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #314554;
+          }
+
+          .toc ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+          }
+
+          .toc ul ul {
+            margin-top: 0.35rem;
+            margin-left: 0.85rem;
+            padding-left: 0.85rem;
+            border-left: 1px solid #e0d5c2;
+          }
+
+          .toc li {
+            margin: 0.35rem 0;
+          }
+
+          .toc a {
+            text-decoration: none;
+            color: #314554;
+          }
+
+          .toc a:hover {
+            text-decoration: underline;
+          }
+
+          .main-column {
+            min-width: 0;
+          }
+
+          .document-header {
+            border-bottom: 1px solid #d8cdb9;
+            margin-bottom: 2.2rem;
+            padding-bottom: 1rem;
+          }
+
+          .document-header h1 {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+            color: #314554;
+            letter-spacing: 0.01em;
+          }
+
+          .source {
+            margin: 0;
+            color: #74695e;
+            font-size: 0.96rem;
+          }
+
+          .tei-text {
+            font-size: 1.08rem;
+          }
+
+          p, .ab {
+            margin: 0 0 1em 0;
+            text-align: justify;
+          }
+
+          .div {
+            margin-bottom: 1.3rem;
+            scroll-margin-top: 1rem;
+          }
+
+          h2 {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1.35rem;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            color: #314554;
+          }
+
+          .div-head {
+            scroll-margin-top: 1rem;
+          }
+
+          .pb {
+            margin: 2.3rem 0 1.4rem 0;
+            padding-top: 0.7rem;
+            border-top: 1px solid #bcae95;
+            color: #7a6d5c;
+            text-align: center;
+            font-size: 0.95rem;
+            letter-spacing: 0.05em;
+          }
+
+          .title-page {
+            margin: 2.5rem 0 3rem 0;
+            padding: 4rem 2rem;
+            background: #f6f0e3;
+            border: 1px solid #d9ccb4;
+            text-align: center;
+          }
+
+          .title-page-text {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin: 0;
+          }
+
+          .note {
+            margin: 1rem 0;
+            padding: 0.85rem 1rem;
+            background: #f2ebde;
+            border-left: 4px solid #b7a58a;
+            font-size: 0.95rem;
+            color: #4e473f;
+          }
+
+          .sp {
+            margin-bottom: 0.7rem;
+          }
+
+          .speaker {
+            display: block;
+            margin: 1.2em 0 0.2em 0;
+            font-variant: small-caps;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            text-align: left;
+          }
+
+          .sp .speaker + p,
+          .sp .speaker + .ab,
+          .sp .speaker + div,
+          .sp .speaker + section {
+            margin-top: 0.15rem;
+          }
+
+          .stage {
+            font-style: italic;
+            margin: 0.4rem 0 0.8rem 0;
+          }
+
+          .lg {
+            margin: 0 0 1em 0;
+          }
+
+          .l {
+            margin: 0;
+            text-align: left;
+          }
+
+          .add {
+            color: #0b6e4f;
+            font-weight: 500;
+          }
+
+          .del {
+            color: #9f2d2d;
+            text-decoration: line-through;
+          }
+
+          .hi {
+            font-style: italic;
+          }
+
+          .choice {
+            display: inline;
+          }
+
+          .tei-text ul {
+            margin: 0.5rem 0 1rem 1.4rem;
+          }
+
+          .tei-text li {
+            margin-bottom: 0.4rem;
+          }
+
+          @media (max-width: 900px) {
+            .with-sidebar {
+              grid-template-columns: 1fr;
+              padding: 1.5rem 1.5rem 2.5rem 1.8rem;
+            }
+
+            .toc {
+              position: static;
+              max-height: none;
+              border-right: none;
+              border-bottom: 1px solid #d8cdb9;
+              padding-right: 0;
+              padding-bottom: 1rem;
+              margin-bottom: 1.5rem;
+            }
+
+            .title-page {
+              padding: 2.5rem 1rem;
+            }
+
+            .title-page-text {
+              font-size: 1.25rem;
+              letter-spacing: 0.08em;
+            }
+          }
+        </style>
+</head>
+<body><main class="page-shell"><div class="page-card with-sidebar">
+<aside class="toc"><h2>Sommaire</h2>
+<ul>
+<li><a href="#div-id1">ACTE PREMIER.</a></li>
+<li>
+<a href="#div-id2">AFFRONT SUR AFFRONT.</a><ul>
+<li><a href="#div-id3">PREMIÈRE PARTIE.</a></li>
+<li><a href="#div-id4">Scène I</a></li>
+<li><a href="#div-id5">Scène II.</a></li>
+<li><a href="#div-id6">Scène III</a></li>
+<li><a href="#div-id7">Scène IV.</a></li>
+<li><a href="#div-id8">Scène V.</a></li>
+<li><a href="#div-id9">Scène VI.</a></li>
+</ul>
+</li>
+</ul></aside><div class="main-column">
+<header class="document-header"><h1>Lucrèce Borgia</h1></header><article class="tei-text">
+
+      <p>PERSONNAGES.</p>
+      
+        DONA LUCREZIA BORGIA.
+        GENNARO.
+        GUBETTA.
+        MAFFIO ORSINI.
+        MAFFIO ET GENNARO
+        JEPPO LIVERETTO.
+        DON APOSTOLO GAZELLA.
+        ASCANIO PETRUCCI.
+        OLOFERNO VITELLOZZO.
+        DON ALPHONSE D’ESTE.
+        RUSTIGHELLO.
+        ASTOLFO.
+      
+      <section class="div" id="div-id1" data-type="act">
+
+        <h2 class="div-head" id="head-id1">ACTE PREMIER.</h2>
+      </section>
+      <section class="div" id="div-id2" data-type="section">
+
+        <h2 class="div-head" id="head-id2">AFFRONT SUR AFFRONT.</h2>
+        <section class="div" id="div-id3" data-type="chapter">
+
+          <h2 class="div-head" id="head-id3">PREMIÈRE PARTIE.</h2>
+          <div class="stage">Une terrasse du palais Barbarigo, à Venise. C’est une fête de nuit. Des masques
+            traversent par instants le théâtre. Des deux côtés de la terrasse, le palais
+            splendidement illuminé et résonnant de fanfares. La terrasse couverte d’ombre et de
+            verdure. Au fond, au bas de la terrasse, est censé couler le canal de la Zueca, sur
+            lequel on voit passer par moments, dans les ténèbres, des gondoles, chargées de masques
+            et de musiciens, à demi éclairées. Chacune de ces gondoles traverse le fond du théâtre
+            avec une symphonie tantôt gracieuse, tantôt lugubre, qui s’éteint par degrés dans
+            l’éloignement. Au fond, Venise au clair de lune.</div>
+        </section>
+        <section class="div" id="div-id4" data-type="scene">
+          <h2 class="div-head" id="head-id4">Scène I</h2>
+          <div class="stage">De jeunes seigneurs, magnifiquement vêtus, leurs masques à la main, causent sur la
+            terrasse.</div>
+          <div class="stage">GUBETTA, GENNARO, vêtu en capitaine, Don APOSTOLO GAZELLA, MAFFIO ORSINI, ASCANIO
+            PETRUCCI, OLOFERNO VITELLOZZO, JEPPO LIVERETTO.</div>
+          <div class="sp">
+<div class="speaker">Oloferno.</div>
+            <p>Nous vivons dans une époque où les gens accomplissent tant d’actions horribles qu’on
+              ne parle plus de celle-là, mais certes il n’y eut jamais événement plus sinistre et
+              plus mystérieux.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>Une chose ténébreuse faite par des hommes ténébreux.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Moi, je sais les faits, messeigneurs. Je les tiens de mon cousin éminentissime le
+              cardinal Carriale, qui a été mieux informé que personne — Vous savez, le cardinal
+              Carriale, qui eut cette fière dispute avec le cardinal Riario au sujet de la guerre
+              contre Charles VIII de France ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro, <div class="stage">bâillant</div>.</div>
+            <p>Ah ! voilà Jeppo qui va nous conter des histoires ! — Pour ma part, je n’écoute pas.
+              Je suis déjà bien assez fatigué sans cela.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Ces choses-là ne t’intéressent pas, Gennaro, et c’est tout simple. Tu es un brave
+              capitaine d’aventure. Tu portes un nom de fantaisie. Tu ne connais ni ton père ni ta
+              mère. On ne doute pas que tu ne sois gentilhomme, à la façon dont tu tiens une épée ;
+              mais tout ce qu’on sait de ta noblesse, c’est que tu te bats comme un lion. Sur mon
+              âme, nous sommes compagnons d’armes, et ce que je dis n’est pas pour t’offenser. Tu
+              m’as sauvé la vie à Rimini, je t’ai sauvé la vie au pont de Vincence. Nous nous sommes
+              juré de nous aider en périls comme en amour, de nous venger l’un l’autre quand besoin
+              serait, de n’avoir pour ennemis, moi, que les tiens, toi que les miens. Un astrologue
+              nous a prédit que nous mourrions le même jour, et nous lui avons donné dix sequins
+              d’or pour la prédiction. Nous ne sommes pas amis, nous sommes frères. Mais enfin, tu
+              as le bonheur de t’appeler simplement Gennaro, de ne tenir à personne, de ne traîner
+              après toi aucune de ces fatalités, souvent héréditaires, qui s’attachent aux noms
+              historiques. Tu es heureux ! Que t’importe ce qui se passe et ce qui s’est passé,
+              pourvu qu’il y ait toujours des hommes pour la guerre et des femmes pour le plaisir ?
+              Que te fait l’histoire des familles et des villes, à toi, enfant du drapeau, qui n’as
+              ni ville ni famille ? Nous, vois-tu, Gennaro ? c’est différent. Nous avons droit de
+              prendre intérêt aux catastrophes de notre temps. Nos pères et nos mères ont été mêlés
+              à ces tragédies, et presque toutes nos familles saignent encore. — Dis-nous ce que tu
+              sais, Jeppo.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <div class="stage">Il se jette dans un fauteuil, dans l’attitude de quelqu’un qui va dormir.</div>
+            <p>Vous me réveillerez quand Jeppo aura fini.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Voici. — C’est en quatorze cent-quatre-vingt…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta, <div class="stage">dans un coin du théâtre</div>.</div>
+            <p>Quatre-vingt-dix-sept.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>C’est juste. Quatre-vingt-dix-sept. Dans une certaine nuit d’un mercredi à un
+              jeudi…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Non. D’un mardi à un mercredi.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Vous avez raison. — Cette nuit donc, un batelier du Tibre, qui s’était couché dans
+              son bateau, le long du bord, pour garder ses marchandises, vit quelque chose
+              d’effrayant. C’était un peu au-dessous de l’église Santo-Hieronimo. Il pouvait être
+              cinq heures après minuit. Le batelier vit venir dans l’obscurité, par le chemin qui
+              est à gauche de l’église, deux hommes qui allaient à pied, de çà, de là, comme
+              inquiets ; après quoi il en parut deux autres ; et enfin trois ; en tout sept. Un seul
+              était à cheval. Il faisait nuit assez noire. Dans toutes les maisons qui regardent le
+              Tibre, il n’y avait plus qu’une seule fenêtre éclairée. Les sept hommes s’approchèrent
+              du bord de l’eau. Celui qui était monté tourna la croupe de son cheval du côté du
+              Tibre, et alors le batelier vit distinctement sur cette croupe des jambes qui
+              pendaient d’un côté, une tête et des bras de l’autre, — le cadavre d’un homme. Pendant
+              que leurs camarades guettaient les angles des rues, deux de ceux qui étaient à pied
+              prirent le corps mort, le balancèrent deux ou trois fois avec force, et le lancèrent
+              au milieu du Tibre. Au moment où le cadavre frappa l’eau, celui qui était à cheval fit
+              une question à laquelle les deux autres répondirent : Oui, monseigneur. Alors le
+              cavalier se retourna vers le Tibre, et vit quelque chose de noir qui flottait sur
+              l’eau. Il demanda ce que c’était. On lui répondit : Monseigneur, c’est le manteau de
+              monseigneur qui est mort. Et quelqu’un de la troupe jeta des pierres à ce manteau, ce
+              qui le fit enfoncer. Ceci fait, ils s’en allèrent tous de compagnie, et prirent le
+              chemin qui mène à Saint-Jacques. Voilà ce que vit le batelier.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Une lugubre aventure ! Était-ce quelqu’un de considérable que ces hommes jetaient
+              ainsi à l’eau ? Ce cheval me fait un effet étrange ; l’assassin en selle, et le mort
+              et en croupe !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Sur ce cheval il y avait les deux frères.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Vous l’avez dit, monsieur de Belverana. Le cadavre, c’était Jean Borgia ; le
+              cavalier, c’était César Borgia.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Famille de démons que ces Borgia ! Et dites, Jeppo, pourquoi le frère tuait-il ainsi
+              le frère ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Je ne vous le dirai pas. La cause du meurtre est tellement abominable, que ce doit
+              être un péché mortel d’en parler seulement.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Je vous le dirai, moi. César, cardinal de Valence, a tué Jean, duc de Gandia, parce
+              que les deux frères aimaient la même femme.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Et qui était cette femme ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta, <div class="stage">toujours au fond du théâtre</div>.</div>
+            <p>Leur sœur.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Assez, monsieur de Belverana. Ne prononcez pas devant nous le nom de cette femme
+              monstrueuse. Il n’est pas une de nos familles à laquelle elle n’ait fait quelque plaie
+              profonde.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>N’y avait-il pas aussi un enfant mêlé à tout cela ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Oui, un enfant dont je ne veux nommer que le père, qui était Jean Borgia.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Cet enfant serait un homme maintenant.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Oloferno.</div>
+            <p>Il a disparu.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Est-ce César Borgia qui a réussi à le soustraire à la mère ? Est-ce la mère qui a
+              réussi à le soustraire à César Borgia ? On ne sait.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Don Apostolo.</div>
+            <p>Si c’est la mère qui cache son fils, elle fait bien. Depuis que César Borgia,
+              cardinal de Valence, est devenu duc de Valentinois, il a fait mourir, comme vous
+              savez, sans compter son frère Jean, ses deux neveux, les fils de Guifry Borgia, prince
+              de Squillacci, et son cousin, le cardinal François Borgia. Cet homme a la rage de tuer
+              ses parents.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Pardieu ! il veut être le seul Borgia, et avoir tous les biens du pape.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>La sœur que vous ne voulez pas nommer, Jeppo, ne fit-elle pas à la même époque une
+              cavalcade secrète au monastère de Saint-Sixte pour s’y renfermer, sans qu’on sût
+              pourquoi ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>Je crois que oui. C’était pour se séparer du seigneur Jean Sforza, son deuxième
+              mari.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Et comment se nommait ce batelier qui a tout vu ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>Je ne sais pas.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Il se nommait Georgio Schiavone, et avait pour industrie de mener du bois par le
+              Tibre à Ripetta.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio, <div class="stage">bas à Ascanio</div>.</div>
+            <p>Voilà un espagnol qui en sait plus long sur nos affaires que nous autres
+            romains.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio, <div class="stage">bas</div>.</div>
+            <p>Je me défie comme toi de ce monsieur de Belverana. Mais n’approfondissons pas ceci ;
+              il y a peut-être une chose dangereuse là-dessous.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Ah ! messieurs, messieurs ! dans quel temps sommes-nous ? Et connaissez-vous une
+              créature humaine qui soit sûre de vivre quelques lendemains dans cette pauvre Italie
+              avec les guerres, les pestes et les Borgia qu’il y a ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Don Apostolo.</div>
+            <p>Ah çà, messeigneurs, je crois que tous tant que nous sommes nous devons faire partie
+              de l’ambassade que la république de Venise envoie au duc de Ferrare, pour le féliciter
+              d’avoir repris Rimini sur les Malatesta. Quand partons-nous pour Ferrare ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Oloferno.</div>
+            <p>Décidément, après-demain. Vous savez que les deux ambassadeurs sont nommés. C’est le
+              sénateur Tiopolo et le général des galères Grimani.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Don Apostolo.</div>
+            <p>Le capitaine Gennaro sera-t-il des nôtres ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Sans doute ! Gennaro et moi nous ne nous séparons jamais.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>J’ai une observation importante à vous soumettre, messieurs ; c’est qu’on boit le vin
+              d’Espagne sans nous.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Rentrons au palais. — Hé ! Gennaro !</p>
+            <div class="stage">À Jeppo.</div>
+            <p>— Mais c’est qu’il s’est réellement endormi pendant votre histoire, Jeppo.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Qu’il dorme.</p>
+            <div class="stage">Tous sortent excepté Gubetta.</div>
+</div>
+        </section>
+        <section class="div" id="div-id5" data-type="scene">
+          <h2 class="div-head" id="head-id5">Scène II.</h2>
+          <div class="stage">GUBETTA, GENNARO, endormi.</div>
+          <div class="sp">
+<div class="speaker">Gubetta, <div class="stage">seul</div>.</div>
+            <p>Oui, j’en sais plus long qu’eux ; ils se disaient cela tout bas. J’en sais plus
+              qu’eux, mais dona Lucrezia en sait plus que moi, monsieur de Valentinois en sait plus
+              que dona Lucrezia, le diable en sait plus que monsieur de Valentinois, et le pape
+              Alexandre-Six en sait plus que le diable.</p>
+            <div class="stage">Regardant Gennaro.</div>
+            <p>— Comme cela dort, ces jeunes gens !</p>
+            <div class="stage">Entre dona Lucrecia, masquée. Elle aperçoit Gennaro endormi, et va le contempler
+              avec une sorte de ravissement et de respect.</div>
+</div>
+        </section>
+        <section class="div" id="div-id6" data-type="scene">
+          <h2 class="div-head" id="head-id6">Scène III</h2>
+          <div class="stage">GUBETTA, DONA LUCREZIA, GENNARO, endormi.</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">à part</div>.</div>
+            <p>Il dort ! — Cette fête l’aura sans doute fatigué ! — Qu’il est beau !</p>
+            <div class="stage">Se retournant.</div>
+            <p>— Gubetta !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Parlez moins haut, madame. — Je ne m’appelle pas ici Gubetta, mais le comte de
+              Belverana, gentilhomme castillan ; vous, vous êtes madame la marquise de
+              Pontequadrato, dame napolitaine. Nous ne devons pas avoir l’air de nous connaître. Ne
+              sont-ce pas là les ordres de votre altesse ? Vous n’êtes point ici chez vous ; vous
+              êtes à Venise.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>C’est juste, Gubetta. Mais il n’y a personne sur cette terrasse, que ce jeune homme
+              qui dort ; nous pouvons causer un instant.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Comme il plaira à votre altesse. J’ai encore un conseil à vous donner ; c’est de ne
+              point vous démasquer. On pourrait vous reconnaître.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et que m’importe ? S’ils ne savent pas qui je suis, je n’ai rien à craindre ; s’ils
+              savent qui je suis, c’est à eux d’avoir peur.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Nous sommes à Venise, madame ; vous avez bien des ennemis ici, et des ennemis libres.
+              Sans doute la république de Venise ne souffrirait pas qu’on osât attenter à la
+              personne de votre altesse ; mais on pourrait vous insulter.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ah ! tu as raison ; mon nom fait horreur, en effet.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Il n’y a pas ici que des vénitiens ; il y a des romains, des napolitains, des
+              romagnols, des lombards, des italiens de toute l’Italie.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et toute l’Italie me hait ! Tu as raison ! Il faut pourtant que tout cela change. Je
+              n’étais pas née pour faire le mal, je le sens à présent plus que jamais. C’est
+              l’exemple de ma famille qui m’a entraînée. — Gubetta !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Madame.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Fais porter sur-le-champ les ordres que nous allons te donner dans notre gouvernement
+              de Spolette.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Ordonnez, madame ; j’ai toujours quatre mules sellées et quatre coureurs tout prêts à
+              partir.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Qu’a-t-on fait de Galeas Accaioli ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Il est toujours en prison, en attendant que votre altesse le fasse pendre.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et Guifry Buondelmonte ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Au cachot. Vous n’avez pas encore dit de le faire étrangler.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et Manfredi de Curzola ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Pas encore étranglé non plus.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et Spadacappa ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>D’après vos ordres, on ne doit lui donner le poison que le jour de Pâques, dans
+              l’hostie. Cela viendra dans six semaines, nous sommes au Carnaval.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et Pierre Capra ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>À l’heure qu’il est, il est encore évêque de Pesaro et régent de la chancellerie ;
+              mais, avant un mois, il ne sera plus qu’un peu de poussière, car Notre Saint-Père le
+              pape l’a fait arrêter sur votre plainte, et le tient sous bonne garde dans les
+              chambres basses du Vatican.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Gubetta, écris en hâte au Saint-Père que je lui demande la grâce de Pierre Capra !
+              Gubetta, qu’on mette en liberté Accaioli ! En liberté Manfredi de Curzola ! En liberté
+              Buondelmonte ! En liberté Spadacappa !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Attendez ! attendez, madame ! laissez-moi respirer ! Quels ordres me donnez-vous là !
+              Ah ! mon Dieu ! il pleut des pardons ! il grêle de la miséricorde ! je suis submergé
+              dans la clémence ! je ne me tirerai jamais de ce déluge effroyable de bonnes
+              actions !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Bonnes ou mauvaises, que t’importe, pourvu que je te les paie.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Ah ! c’est qu’une bonne action est bien plus difficile à faire qu’une mauvaise.
+              — Hélas ! pauvre Gubetta que je suis ! À présent que vous vous imaginez de devenir
+              miséricordieuse, qu’est-ce que je vais devenir, moi ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Écoute, Gubetta, tu es mon plus ancien et mon plus fidèle confident…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Voilà quinze ans, en effet, que j’ai l’honneur d’être votre collaborateur.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Hé bien ! dis, Gubetta, mon vieil ami, mon vieux complice, est-ce que tu ne commences
+              pas à sentir le besoin de changer de genre de vie ? Est-ce que tu n’as pas soif d’être
+              béni, toi et moi, autant que nous avons été maudits ? est-ce que tu n’en as pas assez
+              du crime ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Je vois que vous êtes en train de devenir la plus vertueuse altesse qui
+            soit.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Est-ce que notre commune renommée à tous deux, notre renommée infâme, notre renommée
+              de meurtre et d’empoisonnement, ne commence pas à te peser, Gubetta ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Pas du tout. Quand je passe dans les rues de Spolette, j’entends bien quelquefois des
+              manants qui fredonnent autour de moi : Hum ! ceci est Gubetta, Gubetta-poison,
+              Gubetta-poignard, Gubetta-gibet ! car ils ont mis à mon nom une flamboyante aigrette
+              de sobriquets. On dit tout cela, et quand les voix ne le disent pas, ce sont les yeux
+              qui le disent. Mais qu’est-ce que cela fait ! Je suis habitué à ma mauvaise réputation
+              comme un soldat du pape à servir la messe.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Mais ne sens-tu pas que tous les noms odieux dont on t’accable, et dont on m’accable
+              aussi, peuvent aller éveiller le mépris et la haine dans un cœur où tu voudrais être
+              aimé ? Tu n’aimes donc personne au monde, Gubetta ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Je voudrais bien savoir qui vous aimez, madame !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Qu’en sais-tu ? Je suis franche avec toi ; je ne te parlerai ni de mon père, ni de
+              mon frère, ni de mon mari, ni de mes amants.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Mais c’est que je ne vois guère que cela qu’on puisse aimer.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Il y a encore autre chose, Gubetta.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Ah çà ! est-ce que vous vous faites vertueuse pour l’amour de Dieu ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Gubetta ! Gubetta ! S’il y avait aujourd’hui en Italie, dans cette fatale et
+              criminelle Italie, un cœur noble et pur, un cœur plein de hautes et de mâles vertus,
+              un cœur d’ange sous une cuirasse de soldat ; s’il ne me restait, à moi, pauvre femme,
+              haïe, méprisée, abhorrée, maudite des hommes, damnée du ciel, misérable
+              toute-puissante que je suis ; s’il ne me restait dans l’état de détresse où mon âme
+              agonise douloureusement qu’une idée, qu’une espérance, qu’une ressource, celle de
+              mériter et d’obtenir avant ma mort une petite place, Gubetta, un peu de tendresse, un
+              peu d’estime dans ce cœur si fier et si pur ; si je n’avais d’autre pensée que
+              l’ambition de le sentir battre un jour joyeusement et librement sur le mien ;
+              comprendrais-tu alors, dis, Gubetta, pourquoi j’ai hâte de racheter mon passé, de
+              laver ma renommée, d’effacer les taches de toutes sortes que j’ai partout sur moi, et
+              de changer en une idée de gloire, de pénitence et de vertu, l’idée infâme et sanglante
+              que l’Italie attache à mon nom ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Mort Dieu, madame ! sur quel hermite avez-vous marché aujourd’hui ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ne ris pas. Il y a longtemps déjà que j’ai ces pensées sans te les dire. Lorsqu’on
+              est entraîné par un courant de crimes, on ne s’arrête pas quand on veut. Les deux
+              anges luttaient en moi, le bon et le mauvais ; mais je crois que le bon va enfin
+              l’emporter.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Alors, te Deum laudamus, magnificat anima mea Dominum ! — Savez-vous, madame, que je
+              ne vous comprends plus, et que depuis quelque temps vous êtes devenue indéchiffrable
+              pour moi ? Il y a un mois, votre altesse annonce qu’elle part pour Spolette, prend
+              congé de monseigneur don Alphonse d’Este, votre mari, qui a du reste la bonhomie
+              d’être amoureux de vous comme un tourtereau et jaloux comme un tigre ; votre altesse
+              donc quitte Ferrare, et s’en vient secrètement à Venise, presque sans suite, affublée
+              d’un faux nom napolitain, et moi d’un faux nom espagnol. Arrivée à Venise, votre
+              altesse se sépare de moi, et m’ordonne de ne pas la connaître ; et puis, vous vous
+              mettez à courir les fêtes, les musiques, les tertullias à l’espagnole, profitant du
+              carnaval pour aller partout masquée, cachée à tous, déguisée, me parlant à peine entre
+              deux portes chaque soir ; et voilà que toute cette mascarade se termine par un sermon
+              que vous me faites ! Un sermon de vous à moi, madame ! cela n’est-il pas véhément et
+              prodigieux ? Vous avez métamorphosé votre nom, vous avez métamorphosé votre habit, à
+              présent vous métamorphosez votre âme ! En honneur, c’est pousser furieusement loin le
+              carnaval. Je m’y perds. Où est la cause de cette conduite de la part de votre
+              altesse ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">lui saisissant vivement le bras, et
+                l’attirant près de Gennaro endormi</div>.</div>
+            <p>Vois-tu ce jeune homme ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Ce jeune homme n’est pas nouveau pour moi, et je sais bien que c’est après lui que
+              vous courez sous votre masque depuis que vous êtes à Venise.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Qu’est-ce que tu en dis ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Je dis que c’est un jeune homme qui dort couché sur un banc, et qui dormirait debout
+              s’il avait été en tiers dans la conversation morale et édifiante que je viens d’avoir
+              avec votre altesse.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Est-ce que tu ne le trouves pas bien beau ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Il serait plus beau, s’il n’avait pas les yeux fermés. Un visage sans yeux, c’est un
+              palais sans fenêtres.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Si tu savais comme je l’aime !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>C’est l’affaire de don Alphonse, votre royal mari. Je dois cependant avertir votre
+              altesse qu’elle perd ses peines. Ce jeune homme, à ce qu’on m’a dit, aime d’amour une
+              belle jeune fille nommée Fiametta.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Et la jeune fille, l’aime-t-elle ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>On dit que oui.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Tant mieux ! je voudrais tant le savoir heureux !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Voilà qui est singulier et n’est guère dans vos façons. Je vous croyais plus
+              jalouse.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">contemplant
+              Gennaro</div>.</div>
+            <p>Quelle noble figure !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gubetta.</div>
+            <p>Je trouve qu’il ressemble à quelqu’un…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ne me dis pas à qui tu trouves qu’il ressemble ! — Laisse-moi.</p>
+            <div class="stage">Gubetta sort. Dona Lucrezia reste quelques instants comme en extase devant
+              Gennaro ; elle ne voit pas deux hommes masqués qui viennent d’entrer au fond du
+              théâtre et qui l’observent.</div>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">se croyant seule</div>.</div>
+            <p>C’est donc lui ! il m’est donc enfin donné de le voir un instant sans périls ! Non,
+              je ne l’avais pas rêvé plus beau. Ô Dieu ! épargnez-moi l’angoisse d’être jamais haïe
+              et méprisée de lui ; vous savez qu’il est tout ce que j’aime sous le ciel ! — Je n’ose
+              ôter mon masque ; il faut pourtant que j’essuie mes larmes.</p>
+            <div class="stage">Elle ôte son masque pour s’essuyer les yeux. Les deux hommes masqués causent à
+              voix basse pendant qu’elle baise la main de Gennaro endormi.</div>
+</div>
+          <div class="sp">
+<div class="speaker">Premier homme masqué.</div>
+            <p>Cela suffit, je puis retourner à Ferrare. Je n’étais venu à Venise que pour m’assurer
+              de son infidélité ; j’en ai assez vu. Mon absence de Ferrare ne peut se prolonger plus
+              longtemps. Ce jeune homme est son amant. Comment le nomme-t-on, Rustighello ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Deuxième homme masqué.</div>
+            <p>Il s’appelle Gennaro. C’est un capitaine aventurier, un brave, sans père ni mère, un
+              homme dont on ne connaît pas les bouts. Il est en ce moment au service de la
+              république de Venise.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Premier homme.</div>
+            <p>Fais en sorte qu’il vienne à Ferrare.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Deuxième homme.</div>
+            <p>Cela se fera de soi-même, monseigneur ; il part après-demain pour Ferrare avec
+              plusieurs de ses amis, qui font partie de l’ambassade des sénateurs Tiopolo et
+              Grimani.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Premier homme.</div>
+            <p>C’est bien. Les rapports qu’on m’a faits étaient exacts. J’en ai assez vu, te
+              dis-je ; nous pouvons repartir.</p>
+</div>
+          <div class="stage">Ils sortent.</div>
+            <div class="sp">
+<div class="speaker">Dona Lucrezia,<div class="stage">joignant les mains et presque agenouillée devant Gennaro.</div>
+</div>
+                <p>Ô mon Dieu, qu’il y ait autant de bonheur pour lui qu’il y a eu de malheur pour moi !</p>
+</div>
+            <div class="stage">Elle dépose un baiser sur le front de Gennaro, qui s’éveille en
+            sursaut.</div>
+          <div class="sp">
+<div class="speaker">Gennaro, <div class="stage">saisissant par les deux bras Lucrezia
+                interdite</div>.</div>
+            <p>Un baiser ! une femme ! — Sur mon honneur, madame, si vous étiez reine et si j’étais
+              poète, ce serait véritablement l’aventure de messire Alain Chartier, le rimeur
+              français. — Mais j’ignore qui vous êtes, et moi, je ne suis qu’un soldat.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Laissez-moi, seigneur Gennaro !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Non pas, madame.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Voici quelqu’un !</p>
+            <div class="stage">Elle s’enfuit, Gennaro la suit.</div>
+</div>
+        </section>
+        <section class="div" id="div-id7" data-type="scene">
+          <h2 class="div-head" id="head-id7">Scène IV.</h2>
+          <div class="stage">JEPPO, puis MAFFIO.</div>
+          <div class="sp">
+<div class="speaker">Jeppo, <div class="stage">entrant par le côté opposé</div>.</div>
+            <p>Quel est ce visage ? c’est bien elle ! Cette femme à Venise ! — Hé, Maffio !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio, <div class="stage">entrant</div>.</div>
+            <p>Qu’est-ce ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Que je te dise une rencontre inouïe.</p>
+            <div class="stage">Il parle bas à l’oreille de Maffio.</div>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>En es-tu sûr ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Comme je suis sûr que nous sommes ici dans le palais Barbarigo et non dans le palais
+              Labbia.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Elle était en causerie galante avec Gennaro ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Avec Gennaro.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Il faut tirer mon frère Gennaro de cette toile d’araignée.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Viens avertir nos amis.</p>
+            <div class="stage">Ils sortent. — Pendant quelques instants la scène reste vide ; on voit seulement
+              passer, de temps en temps, au fond du théâtre, quelques gondoles avec des symphonies.
+              — Rentrent Gennaro et dona Lucretia masquée.</div>
+</div>
+        </section>
+        <section class="div" id="div-id8" data-type="scene">
+          <h2 class="div-head" id="head-id8">Scène V.</h2>
+          <div class="stage">GENNARO, DONA LUCREZIA.</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Cette terrasse est obscure et déserte ; je puis me démasquer ici. Je veux que vous
+              voyez mon visage, Gennaro.</p>
+            <div class="stage">Elle se démasque.</div>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Vous êtes bien belle !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Regarde-moi bien, Gennaro, et dis-moi que je ne te fais pas horreur !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Vous me faire horreur, madame ! et pourquoi ? Bien au contraire, je me sens au fond
+              du cœur quelque chose qui m’attire vers vous.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Donc tu crois que tu pourrais m’aimer, Gennaro ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Pourquoi non ? Pourtant, madame, je suis sincère, il y aura toujours une femme que
+              j’aimerai plus que vous.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">souriant</div>.</div>
+            <p>Je sais, la petite Fiametta.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Non.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Qui donc ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Ma mère.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ta mère ! ta mère, ô mon Gennaro ! tu aimes bien ta mère, n’est-ce pas ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Et pourtant je ne l’ai jamais vue. Voilà qui vous paraît bien singulier, n’est-il pas
+              vrai ? Tenez, je ne sais pas pourquoi j’ai une pente à me confier à vous ; je vais
+              vous dire un secret que je n’ai encore dit à personne, pas même à mon frère d’armes,
+              pas même à Maffio Orsini. Cela est étrange de se livrer ainsi au premier venu ; mais
+              il me semble que vous n’êtes pas pour moi la première venue. — Je suis un capitaine
+              qui ne connais pas sa famille, j’ai été élevé en Calabre par un pêcheur dont je me
+              croyais le fils. Le jour où j’eus seize ans, ce pêcheur m’apprit qu’il n’était pas mon
+              père. Quelque temps après, un seigneur vint qui m’arma chevalier, et qui repartit sans
+              avoir levé la visière de son morion. Quelque temps après encore, un homme vêtu de noir
+              vint m’apporter une lettre. Je l’ouvris. C’était ma mère qui m’écrivait, ma mère que
+              je ne connaissais pas, ma mère que je rêvais bonne, douce, tendre, belle comme vous !
+              ma mère, que j’adorais de toutes les forces de mon âme ! Cette lettre m’apprit, sans
+              me dire aucun nom, que j’étais noble et de grande race, et que ma mère était bien
+              malheureuse. Pauvre mère !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Bon Gennaro !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Depuis ce jour-là, je me suis fait aventurier, parce qu’étant quelque chose par ma
+              naissance, j’ai voulu être aussi quelque chose par mon épée. J’ai couru toute
+              l’Italie. Mais le premier jour de chaque mois, en quelque lieu que je sois, je vois
+              toujours venir le même messager. Il me remet une lettre de ma mère, prend ma réponse
+              et s’en va ; et il ne me dit rien, et je ne lui dis rien, parce qu’il est sourd et
+              muet.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ainsi tu ne sais rien de ta famille ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Je sais que j’ai une mère, qu’elle est malheureuse, et que je donnerais ma vie dans
+              ce monde pour la voir pleurer, et ma vie dans l’autre pour la voir sourire. Voilà
+              tout.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Que fais-tu de ses lettres ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Je les ai toutes là, sur mon cœur. Nous autres gens de guerre, nous risquons souvent
+              notre poitrine à l’encontre des épées. Les lettres d’une mère, c’est une bonne
+              cuirasse.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Noble nature !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Tenez, voulez-vous voir son écriture ? voici une de ses lettres.</p>
+            <div class="stage">Il tire de sa poitrine un papier qu’il baise et qu’il remet à Dona
+              Lucrezia.</div>
+            <p>— Lisez cela.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, <div class="stage">lisant</div>.</div>
+            <p>« ...... Ne cherche pas à me connaître, mon Gennaro, avant le jour que je te
+              marquerai. Je suis bien à plaindre, va. Je suis entourée de parents sans pitié, qui te
+              tueraient comme ils ont tué ton père. Le secret de ta naissance, mon enfant, je veux
+              être la seule à le savoir. Si tu le savais, toi, cela est à la fois si triste et si
+              illustre que tu ne pourrais pas t’en taire ; la jeunesse est confiante, tu ne connais
+              pas les périls qui t’environnent comme je les connais ; qui sait ? tu voudrais les
+              affronter par bravade de jeune homme, tu parlerais ou tu te laisserais deviner, et tu
+              ne vivrais pas deux jours. Oh non ! contente-toi de savoir que tu as une mère qui
+              t’adore et qui veille nuit et jour sur ta vie. Mon Gennaro, mon fils, tu es tout ce
+              que j’aime sur la terre ; mon cœur se fond quand je songe à toi. »</p>
+            <div class="stage">Elle s’interrompt pour dévorer une larme.</div>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Comme vous lisez cela tendrement ! On ne dirait pas que vous lisez, mais que vous
+              parlez. — Ah ! vous pleurez ! — Vous êtes bonne, madame, et je vous aime de pleurer de
+              ce qu’écrit ma mère.</p>
+            <div class="stage">Il reprend la lettre, la baise de nouveau, et la remet dans sa poitrine.</div>
+            <p>— Oui, vous voyez, il y a eu bien des crimes autour de mon berceau. — Ma pauvre
+              mère ! — n’est-ce pas que vous comprenez maintenant que je m’arrête peu aux
+              galanteries et aux amourettes, parce que je n’ai qu’une pensée au cœur, ma mère ! Oh !
+              délivrer ma mère ! la servir, la venger, la consoler ! quel bonheur ! Je penserai à
+              l’amour après ! Tout ce que je fais, je le fais pour être digne de ma mère. Il y a
+              bien des aventuriers qui ne sont pas scrupuleux, et qui se battraient pour Satan après
+              s’être battus pour saint Michel ; moi, je ne sers que des causes justes ; je veux
+              pouvoir déposer un jour aux pieds de ma mère une épée nette et loyale comme celle d’un
+              empereur. — Tenez, madame, on m’a offert un gros enrôlement au service de cette infâme
+              madame Lucrèce Borgia. J’ai refusé.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Gennaro ! — Gennaro ! ayez pitié des méchants ! Vous ne savez pas ce qui se passe
+              dans leur cœur.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Je n’ai pas pitié de qui est sans pitié. — Mais laissons cela, madame ; et maintenant
+              que je vous ai dit qui je suis, faites de même, et dites-moi à votre tour qui vous
+              êtes.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Une femme qui vous aime, Gennaro.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Mais votre nom ?…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ne m’en demandez pas plus.</p>
+            <div class="stage">Des flambeaux. Entrent avec bruit Jeppo et Maffio. Dona Lucrezia remet son masque
+              précipitamment.</div>
+</div>
+        </section>
+        <section class="div" id="div-id9" data-type="scene">
+          <h2 class="div-head" id="head-id9">Scène VI.</h2>
+          <div class="stage">Les mêmes, MAFFIO ORSINI, JEPPO LIVERETTO, ASCANIO PETRUCCI, OLOFERNO VITELLOZZO,
+            DON APOSTOLO GAZELLA. — Seigneurs, Dames, Pages portant des flambeaux.</div>
+          <div class="sp">
+<div class="speaker">Maffio, <div class="stage">un flambeau à la main</div>.</div>
+            <p>Gennaro ! veux-tu savoir quelle est la femme à qui tu parles d’amour ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona lucrezia, à part, sous son masque.</div>
+            <p>Juste ciel !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Vous êtes tous mes amis, mais je jure Dieu que celui qui touchera au masque de cette
+              femme sera un enfant hardi. Le masque d’une femme est sacré comme la face d’un
+              homme.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Il faut d’abord que la femme soit une femme, Gennaro ! Mais nous ne voulons point
+              insulter celle-là ; nous voulons seulement lui dire nos noms.</p>
+            <div class="stage">Faisant un pas vers Dona Lucrezia.</div>
+            <p>— Madame, je suis Maffio Orsini, frère du duc de Gravina, que vos sbires ont étranglé
+              la nuit pendant qu’il dormait.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Madame, je suis Jeppo Liveretto, neveu de Liveretto Vitelli, que vous avez fait
+              poignarder dans les caves du Vatican.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>Madame, je suis Ascanio Petrucci, cousin de Pandolfo Petrucci, seigneur de Sienne,
+              que vous avez assassiné pour lui voler plus aisément sa ville.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Oloferno.</div>
+            <p>Madame, je m’appelle Oloferno Vitellozzo, neveu d’Iago d’Appiani, que vous avez
+              empoisonné dans une fête, après lui avoir traîtreusement dérobé sa bonne citadelle
+              seigneuriale de Piombino.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Don Apostolo.</div>
+            <p>Madame, vous avez mis à mort sur l’échafaud don Francisco Gazella, oncle maternel de
+              don Alphonse d’Aragon, votre troisième mari, que vous avez fait tuer à coups de
+              hallebarde sur le palier de l’escalier de Saint-Pierre. Je suis don Apostolo Gazella,
+              cousin de l’un et fils de l’autre.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Ô Dieu !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro.</div>
+            <p>Quelle est cette femme ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Et maintenant que nous vous avons dit nos noms, madame, voulez-vous que nous vous
+              disions le vôtre ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Non ! non ! ayez pitié, messeigneurs ! Pas devant lui !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio, <div class="stage">la démasquant</div>.</div>
+            <p>Ôtez votre masque, madame, qu’on voie si vous pouvez encore rougir.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Don Apostolo.</div>
+            <p>Gennaro, cette femme à qui tu parlais d’amour est empoisonneuse et adultère.</p>
+</div>
+          <div class="sp">
+<div class="speaker">Jeppo.</div>
+            <p>Inceste à tous les degrés. Inceste avec ses deux frères, qui se sont entretués pour
+              l’amour d’elle !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Grâce !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Ascanio.</div>
+            <p>Inceste avec son père, qui est pape !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Pitié !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Oloferno.</div>
+            <p>Inceste avec ses enfants, si elle en avait ; mais le ciel en refuse aux
+              monstres !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Assez ! assez !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Veux-tu savoir son nom, Gennaro ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <p>Grâce ! grâce ! messeigneurs !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio.</div>
+            <p>Gennaro, veux-tu savoir son nom ?</p>
+</div>
+          <div class="sp">
+<div class="speaker">Dona Lucrezia.</div>
+            <div class="stage">Elle se traîne aux genoux <div class="stage">de</div> Gennaro.</div>
+            <p>N’écoute pas, mon Gennaro !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Maffio, <div class="stage">étendant le bras</div>.</div>
+            <p>C’est Lucrèce Borgia !</p>
+</div>
+          <div class="sp">
+<div class="speaker">Gennaro, <div class="stage">la repoussant</div>.</div>
+            <p>Oh !…</p>
+</div>
+          <div class="sp">
+<div class="speaker">Tous.</div>
+            <p>Lucrèce Borgia !</p>
+            <div class="stage">Elle tombe évanouie aux pieds de Gennaro.</div>
+</div>
+        </section>
+      </section>
+    </article>
+</div>
+</div></main></body>
+</html>
